@@ -1,0 +1,12 @@
+#!/usr/bin/perl -w
+
+use PerlLib::SwissArmyKnife;
+
+my $command = "unilang-client -r Emacs-Client -c \"eval (gourmet-formalog-quick-start)\"";
+print $command."\n";
+ApproveCommands
+  (
+   Commands => [$command],
+   AutoApprove => 1,
+  );
+

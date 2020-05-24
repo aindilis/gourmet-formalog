@@ -1,0 +1,40 @@
+#!/usr/bin/perl -w
+
+# see Formalog::Util::Prolog;
+# see Formalog::Multi;
+# see Formalog::Multi::Agent;
+# see Formalog::Multi::Agent::Yaswi;
+
+use Formalog::Multi::Test;
+
+use UniLang::Agent::Agent;
+use UniLang::Util::Message;
+
+$UNIVERSAL::agent = UniLang::Agent::Agent->new
+  (Name => "Gourmet-Formalog",
+   ReceiveHandler => \&Receive);
+$UNIVERSAL::agent->DoNotDaemonize(1);
+
+$UNIVERSAL::test = Formalog::Multi::Test->new();
+
+sub Receive {
+  my %args = @_;
+  $UNIVERSAL::test->ProcessMessage
+    (Message => $args{Message});
+}
+
+$UNIVERSAL::test->Execute
+  (
+   AddNewAgentArgs => {
+		       AgentName => 'Gourmet-Formalog-Agent1',
+		       YaswiName => 'Gourmet-Formalog-Yaswi1',
+		       YaswiData => {
+				     Context => 'Org::FRDCSA::Gourmet-Formalog',
+				     FileNameToLoad => '/var/lib/myfrdcsa/codebases/minor/gourmet-formalog/gourmet.pl',
+				     # Before => '',
+				     # During => '',
+				     # After => '',
+				    },
+		      },
+  );
+

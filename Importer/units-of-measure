@@ -1,0 +1,14 @@
+code	fractions	1/2	1	> 1
+c	of a cup of	a cup of	cup of	cups of
+qt	of a quart of	a quart of	quart of	quarts of
+ts	of a teaspoon of	a teaspoon of	teaspoon of	teaspoons of
+sl	of a slice of	a slice of	   slice of	slices of
+lb	of a pound of	a pound of	   pound of	pounds of
+tb	of a tablespoon of	a tablespoon of	tablespoon of	tablespoons of
+lg	of a large	of a large	large
+md	of a medium	of a medium	medium
+sm	of a small	of a small	small
+oz	of an ounce of	an ounce of	ounce of	ounces of
+pk	of a packet of	a packet of	packet of	packets of
+cn	of a can of	a can of can of	cans of
+pn	of a pinch of	a pinch of	pinch of	pinches of

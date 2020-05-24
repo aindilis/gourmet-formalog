@@ -1,0 +1,32 @@
+WNprolog-3.1 is a Prolog version of WordNet 3.1, compiled
+by Eric Kafe (https://github.com/ekaf/wordnet-prolog).
+
+The Prolog databases were generated from the original
+WordNet 3.1 databases, and bundled with a copy of the
+WNprolog-3.0 documentation (c) 2012 Princeton University.
+
+The present release contains the following numbers of
+unique Prolog clauses:
+
+    7983 wn_ant.pl
+    1278 wn_at.pl
+    9559 wn_cls.pl
+     221 wn_cs.pl
+   74670 wn_der.pl
+     408 wn_ent.pl
+   21684 wn_fr.pl
+  117791 wn_g.pl
+   89172 wn_hyp.pl
+    8589 wn_ins.pl
+   12288 wn_mm.pl
+    9111 wn_mp.pl
+     797 wn_ms.pl
+    8074 wn_per.pl
+      73 wn_ppl.pl
+    3276 wn_sa.pl
+   21434 wn_sim.pl
+  207272 wn_sk.pl
+  207272 wn_s.pl
+    1054 wn_syntax.pl
+    1744 wn_vgp.pl
+  803750 total
