@@ -31,22 +31,16 @@ isolate(A,B) :-
 
 ingredients_to_foods(Entry) --> getNextListItem(TmpSubject),[','],oneOrMore(getNextListItem,Properties),
 	{
-	 viewIf('fuck you'),
 	 isolate(TmpSubject,Subject),
-	 viewIf('fuck you some more'),
 	 First = [isa('$VAR'('Ingredient'),Subject)],
-	 viewIf('keep fucking you'),
 	 %% check_ingredient(Subject),
-	 viewIf('continue to keep fucking you'),
 	 findall(hasProperty('$VAR'('Ingredient'),Property),
 	 	 (
 	 	  member(TmpProperty,Properties),
 	 	  isolate(TmpProperty,Property)
 	 	 ),
 	 	 Rest),
-	 viewIf('fuck your whole family'),
 	 append([First,Rest],Assertions),
-	 viewIf('die scum'),
 	 Entry = and(Assertions)
 	},!.
 
@@ -116,13 +110,9 @@ branded_food__ingredients(Entry) --> oneOrMore(getNextListItem,Entries),
 
 getNextListItem(Entry) --> oneOrMore(token,Entry),([','];['.'];['-'];[]),
 	{
-	 viewIf('fuck your whole family 2'),
 	 not(member(',',Entry)),
-	 viewIf('fuck your whole family 3'),
 	 not(member('.',Entry)),
-	 viewIf('fuck your whole family 4'),
-	 not(member('-',Entry)),
-	 viewIf('fuck your whole family 5')
+	 not(member('-',Entry))
 	}.
 
 listItem(Token) --> grabber(Token,token),
